@@ -174,7 +174,7 @@ But note the emphasis on ``glue'' and ``configuration,''
 not the process of analyzing data.
 
 \vspace{1 cm}
-How do physicists {\it use} Python now?
+How do physicists {\it use} Python?
 \end{center}
 \end{frame}
 
@@ -196,6 +196,14 @@ By regex searching for ``\mintinline{python}{import [A-Za-z_][A-Za-z_0-9]*}'' et
 \vspace{0.2 cm}
 
 \includegraphics[width=\linewidth]{PLOTS/gihub-package-fullstudy.pdf}
+\end{frame}
+
+\begin{frame}{You can also just ask them: PyHEP 2020 survey ($N=406$)}
+\vspace{0.5 cm}
+\begin{columns}
+\column{1.15\linewidth}
+\includegraphics[width=\linewidth]{PLOTS/pyhep2020-survey-5.pdf}
+\end{columns}
 \end{frame}
 
 \begin{frame}{There has been a massive adoption of Python for HEP analysis.}
@@ -240,10 +248,155 @@ Large-scale HEP processing frameworks are no longer the default model for how to
 \end{frame}
 
 \begin{frame}{Model: small, specialized packages for Lego-style data analysis}
+\vspace{0.75 cm}
+\Large
 
+\begin{columns}
+\column{0.55\linewidth}
+\begin{uncoverenv}<1->
+\mbox{ } \hfill Scientific Python ecosystem \hfill \mbox{ }
 
+\includegraphics[width=\linewidth]{PLOTS/shells-border.png}
+\end{uncoverenv}
 
+\column{0.55\linewidth}
+\begin{uncoverenv}<2->
+\mbox{ } \hfill Scikit-HEP ecosystem \hfill \mbox{ }
+
+\includegraphics[width=\linewidth]{PLOTS/shells-hep.pdf}
+\end{uncoverenv}
+\end{columns}
 \end{frame}
+
+\begin{frame}{Download rates of Scikit-HEP packages (on Mac \& Windows)}
+\vspace{0.25 cm}
+\only<1>{\includegraphics[width=\linewidth]{PLOTS/pip-macwin-scikithep-log-for-report-0.pdf}}\only<2>{\includegraphics[width=\linewidth]{PLOTS/pip-macwin-scikithep-log-for-report.pdf}}
+\end{frame}
+
+\begin{frame}{}
+\vspace{1 cm}
+\Large
+
+\begin{center}
+There isn't a central authority to divide up the space of analysis problems and assign people to develop packages.
+
+\vspace{1 cm}
+But interested developers find underserved areas and build them up. Borders between them start vague and eventually get defined.
+\end{center}
+\end{frame}
+
+\begin{frame}{Case study: development of histogram packages}
+\large
+\vspace{0.5 cm}
+
+The scientific Python world lacked HEP-style histograms; it's one of the things we had to make ourselves.
+
+\vspace{0.5 cm}
+\uncover<2->{Also, it seems easy: just bin and count, right?}
+
+\vspace{0.5 cm}
+\uncover<3->{Physicists have created at least 20 histogram packages in Python, mostly by single authors.}
+
+\vspace{0.5 cm}
+\begin{uncoverenv}<3->
+\begin{columns}
+\scriptsize
+\column{0.26\linewidth}
+\begin{itemize}
+\item PyROOT (2004--now)
+\item PAIDA (2004--2007)
+\item Plothon (2007--2008)
+\item SVGFig (2008--2009)
+\item YODA (2008--now)
+\end{itemize}
+
+\column{0.27\linewidth}
+\begin{itemize}
+\item DANSE (2009--2011)
+\item rootpy (2011--2019)
+\item SimpleHist (2011--2015)
+\item pyhistogram (2015)
+\item multihist (2015--now)
+\end{itemize}
+
+\column{0.28\linewidth}
+\begin{itemize}
+\item matplotlib-hep (2016)
+\item QHist (2017--2019)
+\item Physt (2016--now)
+\item \mbox{Histogrammar (2016--now)\hspace{-0.2 cm}}
+\item HistBook (2018--2019)
+\end{itemize}
+
+\column{0.32\linewidth}
+\begin{itemize}
+\item Coffea.hist (2019--2022)
+\item boost-histogram (2019--now)
+\item mplhep (2019--now)
+\item histoprint (2020--now)
+\item hist (2020--now)
+\end{itemize}
+
+\end{columns}
+\end{uncoverenv}
+\end{frame}
+
+\begin{frame}{Histogram proliferation and convergence}
+\large
+\vspace{0.25 cm}
+
+Number of unique developers contributing to each package per month (in git). Measures concentration of {\it developer activity}, not users.
+
+\vspace{0.1 cm}
+\includegraphics[width=\linewidth]{PLOTS/github-histogram-libraries.pdf}
+\end{frame}
+
+\begin{frame}[fragile]{Boost::Histogram, hist \& mplhep ``system''}
+\vspace{0.5 cm}
+\begin{columns}
+\column{0.6\linewidth}
+\includegraphics[width=\linewidth]{PLOTS/histogram-convergence.pdf}
+
+\column{0.45\linewidth}
+Originally, each of these was developed independently by a single author.
+
+\vspace{0.75 cm}
+\begin{uncoverenv}<2->
+They each provide a piece of functionality users can get through
+
+\begin{minted}{python}
+import hist
+\end{minted}
+\end{uncoverenv}
+
+\vspace{0.75 cm}
+\uncover<3->{Now, 47 developers have contributed to these packages, and 20 contributed to more than one.}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Now we define the borders: agreed-upon protocols}
+\vspace{0.5 cm}
+\begin{columns}
+\column{1.1\linewidth}
+\includegraphics[width=\linewidth]{PLOTS/histogram-protocol-screenshot.png}
+\end{columns}
+\end{frame}
+
+\begin{frame}{}
+\vspace{1 cm}
+\Large
+
+\begin{center}
+For users, the multiplicity of packages isn't a problem because package managers resolve dependencies.
+
+\vspace{1 cm}
+\texttt{\textbf{\textcolor{darkgreen}{pip install} \textcolor{blue}{hist}}}
+
+\vspace{1 cm}
+For developers, it provides more visibility, \\ ease of maintenance, and protection against scope-creep.
+\end{center}
+\end{frame}
+
 
 
 
