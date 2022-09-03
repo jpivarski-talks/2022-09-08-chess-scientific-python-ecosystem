@@ -82,7 +82,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Is Python part of that ``modern''?}
+\begin{frame}{Is Python part of what I'm calling ``modern''?}
 \large
 \vspace{0.25 cm}
 Python is leading every programming language popularity index.
@@ -114,26 +114,26 @@ Python is leading every programming language popularity index.
 \end{columns}
 \end{frame}
 
-\begin{frame}{Is Python part of that ``modern''?}
+\begin{frame}{Is Python part of what I'm calling ``modern''?}
 \large
 \vspace{0.25 cm}
 
-And this is a recent thing, too.
+It's a recent thing, too.
 
 \vspace{0.25 cm}
-\href{https://www.tiobe.com/tiobe-index/}{\textcolor{blue}{Tiobe index}}'s top 3 or 4 for the past 35 years:
+\href{https://www.tiobe.com/tiobe-index/}{\textcolor{blue}{Tiobe index}}'s top $\sim$3 languages for the past 35 years:
 
 \renewcommand{\arraystretch}{1.25}
 \begin{center}
-\begin{tabular}{c l l}
-1987 & C, Lisp, Prolog                 & \\
-1992 & C, C++, Pascal                  & Python exists \\
-1997 & C, C++, (Visual) Basic          & Python is \#28 \\
-2002 & Java, C, C++, (Visual) Basic    & Python is \#12 \\
-2007 & Java, C, C++, (Visual) Basic    & Python is \#7 \\
-2012 & Java, C, C++, C\#               & Python is \#8 \\
-2017 & Java, C, C++, C\#               & Python is \#5 \\
-2022 & Python, C, Java, C++            & Python is \#1 \\
+\begin{tabular}{c c l c l}
+1987 & & C, Lisp, Prolog                 & & \\
+1992 & & C, C++, Pascal                  & & Python exists \\
+1997 & & C, C++, (Visual) Basic          & & Python is \#28 \\
+2002 & & Java, C, C++, (Visual) Basic    & & Python is \#12 \\
+2007 & & Java, C, C++, (Visual) Basic    & & Python is \#7 \\
+2012 & & Java, C, C++, C\#               & & Python is \#8 \\
+2017 & & Java, C, C++, C\#               & & Python is \#5 \\
+2022 & & Python, C, Java, C++, C\#       & & Python is \#1 \\
 \end{tabular}
 \end{center}
 \end{frame}
@@ -198,7 +198,7 @@ By regex searching for ``\mintinline{python}{import [A-Za-z_][A-Za-z_0-9]*}'' et
 \includegraphics[width=\linewidth]{PLOTS/gihub-package-fullstudy.pdf}
 \end{frame}
 
-\begin{frame}{You can also just ask them: PyHEP 2020 survey ($N=406$)}
+\begin{frame}{You can also just ask people: PyHEP 2020 survey ($N=406$)}
 \vspace{0.5 cm}
 \begin{columns}
 \column{1.15\linewidth}
@@ -206,7 +206,7 @@ By regex searching for ``\mintinline{python}{import [A-Za-z_][A-Za-z_0-9]*}'' et
 \end{columns}
 \end{frame}
 
-\begin{frame}{There has been a massive adoption of Python for HEP analysis.}
+\begin{frame}{There has been a massive transition to Python for HEP analysis.}
 \large
 \vspace{0.35 cm}
 
@@ -220,7 +220,7 @@ By regex searching for ``\mintinline{python}{import [A-Za-z_][A-Za-z_0-9]*}'' et
 \begin{onlyenv}<3-9>
 \begin{itemize}\setlength{\itemsep}{0.1 cm}
 \item<3-> \textcolor{darkblue}{Python}: culture of readability first, performance and software architecture later, if at all. More focus on the domain (e.g.\ science) than programming.
-\item<4-> \textcolor{darkblue}{C++}: performance and software architecture are up-front concerns; favored among large-scale HEP processing, high-speed trading, game engines.
+\item<4-> \textcolor{darkblue}{C++}: performance and software architecture are up-front concerns; favored among large-scale HEP processing, high-speed trading, gaming engines.
 \item<5-> \textcolor{darkblue}{Java} and \textcolor{darkblue}{Go}: software architecture is an overriding concern, especially in networked services; backend web engineers and internal corporate networks.
 \item<6-> \textcolor{darkblue}{Rust}: performance with memory safety overrides all.
 \item<7-> \textcolor{darkblue}{Julia}: academic/scientist community, but very focused on performance.
@@ -234,7 +234,7 @@ By regex searching for ``\mintinline{python}{import [A-Za-z_][A-Za-z_0-9]*}'' et
 \end{uncoverenv}
 \end{frame}
 
-\begin{frame}{There has been a massive adoption of Python for HEP analysis.}
+\begin{frame}{There has been a massive transition to Python for HEP analysis.}
 \large
 \vspace{0.35 cm}
 
@@ -417,7 +417,7 @@ Various ``devops'' practices are common in scientific Python tool development, a
 These are now cultural norms. Note that some graduate student developers were born after the {\it Manifesto for Agile Software Development} (2001). {\tt :)}
 \end{frame}
 
-\begin{frame}{Scikit-HEP developer pages}
+\begin{frame}{Scikit-HEP developer pages: recommendations and cookiecutter}
 \vspace{0.18 cm}
 \mbox{ } \hfill \includegraphics[width=0.755\linewidth]{PLOTS/developer-pages-screenshot.png} \hfill \mbox{ }
 \end{frame}
@@ -427,13 +427,13 @@ These are now cultural norms. Note that some graduate student developers were bo
 \Large
 
 \begin{center}
-In case I painted too rosy a picture, there are issues.
+Hopefully, I didn't paint too rosy of a picture: there are issues.
 
 \vspace{0.75 cm}
-\uncover<2->{Most of the tool developers are self-selected from advanced data analysts, and the tools tend to be expert-oriented.}
+\uncover<2->{Many of our developers are self-selected from advanced data analysts, and the tools they write tend to be expert-oriented.}
 
 \vspace{0.75 cm}
-\uncover<3->{\mbox{\hspace{-0.5 cm}Python itself is beginner-friendly, but analysis tools sometimes aren't.\hspace{-0.5 cm}}}
+\uncover<3->{\mbox{\hspace{-0.5 cm}Python itself is beginner-friendly, but analysis tools/docs aren't always.\hspace{-0.5 cm}}}
 
 \vspace{0.75 cm}
 \uncover<4->{Also, there isn't a clearly centralized place to ask questions: \\ there are too many places to ask questions.}
