@@ -406,15 +406,15 @@ Various ``devops'' practices are common in scientific Python tool development, a
 \vspace{0.25 cm}
 \begin{itemize}
 \item Automated test suites, checked on every git commit
-\item Encapsulation of test environment and matrix of platforms
-\item Automated (push button) deployment to PyPI
+\item Encapsulation of test environment and matrix of platforms to test
+\item Automated (push button) deployment to PyPI and conda-forge
 \item Issue tracking, pull request workflow
-\item Pull request reviews
+\item Pull request reviews, extensive discussions on GitHub
 \item Contributing to more than one's ``own'' project
 \end{itemize}
 
 \vspace{0.5 cm}
-These are now cultural norms. Note that some graduate student developers were born after the {\it Manifesto for Agile Software Development} (2001)!
+These are now cultural norms. Note that some graduate student developers were born after the {\it Manifesto for Agile Software Development} (2001). {\tt :)}
 \end{frame}
 
 \begin{frame}{Scikit-HEP developer pages}
@@ -430,10 +430,10 @@ These are now cultural norms. Note that some graduate student developers were bo
 In case I painted too rosy a picture, there are issues.
 
 \vspace{0.75 cm}
-\uncover<2->{Most of the tool developers self-select from among advanced data analysts, and the tools tend to be expert-oriented.}
+\uncover<2->{Most of the tool developers are self-selected from advanced data analysts, and the tools tend to be expert-oriented.}
 
 \vspace{0.75 cm}
-\uncover<3->{Python itself is beginner-friendly, but analysis tools often aren't.}
+\uncover<3->{\mbox{\hspace{-0.5 cm}Python itself is beginner-friendly, but analysis tools sometimes aren't.\hspace{-0.5 cm}}}
 
 \vspace{0.75 cm}
 \uncover<4->{Also, there isn't a clearly centralized place to ask questions: \\ there are too many places to ask questions.}
@@ -443,13 +443,18 @@ In case I painted too rosy a picture, there are issues.
 \begin{frame}{There are, however, extensive projects to improve training}
 \vspace{0.25 cm}
 
-One of \href{https://iris-hep.org/}{\textcolor{blue}{IRIS-HEP}}'s projects is to develop HEP software training modules, modeled on and in collaboration with Software Carpentries.
+One of \href{https://iris-hep.org/}{\textcolor{blue}{IRIS-HEP}}'s projects is to develop HEP software training, \\ modeled on and in collaboration with Software Carpentries.
 
-\includegraphics[width=\linewidth]{PLOTS/Training-Pyramid.png}
+\mbox{\hspace{-0.75 cm}\includegraphics[width=\linewidth]{PLOTS/Training-Pyramid.png}}
+
+\vspace{-7.75 cm}
+\hfill \mbox{\includegraphics[width=4 cm]{PLOTS/instructor_mentor_small.jpg}\hspace{-1 cm}}
+\vspace{7.75 cm}
 \end{frame}
 
 \begin{frame}{PyHEP workshop evolved from developer-focus to a training event}
-\vspace{0.5 cm}
+\Large
+\vspace{0.35 cm}
 
 \begin{columns}
 \column{0.5\linewidth}
@@ -459,19 +464,54 @@ One of \href{https://iris-hep.org/}{\textcolor{blue}{IRIS-HEP}}'s projects is to
 \includegraphics[width=\linewidth]{PLOTS/pyhep-2021-photo.png}
 
 \end{columns}
+
+\vspace{0.1 cm}
+\begin{columns}
+\column{0.5\linewidth}
+\mbox{ } \hfill 2018 \hfill \mbox{ }
+
+\column{0.5\linewidth}
+\mbox{ } \hfill 2021 \hfill \mbox{ }
+
+\end{columns}
 \end{frame}
 
-\begin{frame}{Guess what happened?}
+\begin{frame}{Can you guess what happened?}
 \begin{columns}
 \column{1.07\linewidth}
 \includegraphics[height=5 cm]{PLOTS/pyhep-num-registrations.pdf}\includegraphics[height=5 cm]{PLOTS/registrations_nr_pyhep_attended.png}
 \end{columns}
 \end{frame}
 
-\begin{frame}{Most presentations are in computable notebooks}
-\vspace{0.25 cm}
+\begin{frame}{Most presentations/tutorials are in computable notebooks}
+\vspace{0.35 cm}
 
 \mbox{ } \hfill \includegraphics[width=0.85\linewidth]{PLOTS/pyhep-2018-notebook-screenshot.png} \hfill \mbox{ }
+\end{frame}
+
+\begin{frame}{And 20--40\% of the 1000 registrants attend/run the notebooks}
+\vspace{0.5 cm}
+
+\begin{columns}
+\column{1.1\linewidth}
+\includegraphics[width=\linewidth]{PLOTS/binder-launches-zoom-attendance.pdf}
+\end{columns}
+\end{frame}
+
+\begin{frame}{PyHEP 2022 is next week, September 12--16}
+\vspace{-0.1 cm}
+
+\begin{columns}
+\column{1.15\linewidth}
+\includegraphics[width=\linewidth]{PLOTS/pyhep-2022-screenshot.png}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Last slide: my own project}
+\begin{columns}
+\column{1.15\linewidth}
+\includegraphics[width=\linewidth]{PLOTS/awkward-array-elevator-pitch.pdf}
+\end{columns}
 \end{frame}
 
 \end{document}
